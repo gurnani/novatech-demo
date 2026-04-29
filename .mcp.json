@@ -8,7 +8,7 @@
         "@modelcontextprotocol/server-github"
       ],
       "env": {
-        "GITHUB_ACCESS_TOKEN": "${MCP_TOKEN}"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
       }
     }
   }

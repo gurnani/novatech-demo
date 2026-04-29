@@ -1,0 +1,95 @@
+[1mdiff --git a/CLAUDE.md b/CLAUDE.md[m
+[1mindex 658fdc9..7d846ea 100644[m
+[1m--- a/CLAUDE.md[m
+[1m+++ b/CLAUDE.md[m
+[36m@@ -66,3 +66,90 @@[m [mnpm run test:e2e    # E2E tests only[m
+ - Accessibility improvements (WCAG 2.1 AA)[m
+ - Form validation enhancements[m
+ - Mobile navigation refinements[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mafter you generate github.instructions file with /Init command, add following guidelines in your generated .md file[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m# Behavioral Guidelines[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m**Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## 1. Think Before Coding[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m**Don't assume. Don't hide confusion. Surface tradeoffs.**[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- State your assumptions explicitly. If uncertain, ask.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- If multiple interpretations exist, present them - don't pick silently.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- If a simpler approach exists, say so. Push back when warranted.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- If something is unclear, stop. Name what's confusing. Ask.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## 2. Simplicity First[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m**Minimum code that solves the problem. Nothing speculative.**[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- No features beyond what was asked.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- No abstractions for single-use code.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- No "flexibility" or "configurability" that wasn't requested.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- No error handling for impossible scenarios.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- If you write 200 lines and it could be 50, rewrite it.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## 3. Surgical Changes[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m**Touch only what you must. Clean up only your own mess.**[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- Don't "improve" adjacent code, comments, or formatting.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- Don't refactor things that aren't broken.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- Match existing style, even if you'd do it differently.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- Remove imports/variables/functions that YOUR changes made unused.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- Don't remove pre-existing dead code unless asked.[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m## 4. Goal-Driven Execution[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m**Define success criteria. Loop until verified.**[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m [m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- "Add validation" → "Write tests for invalid inputs, then make them pass"[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- "Fix the bug" → "Write a test that reproduces it, then make it pass"[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m- "Refactor X" → "Ensure tests pass before and after"[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m-[m[41m [m
+[41m+[m
