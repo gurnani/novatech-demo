@@ -68,7 +68,6 @@ npm run test:e2e    # E2E tests only
 - Mobile navigation refinements
 
 
-after you generate github.instructions file with /Init command, add following guidelines in your generated .md file
 
 # Behavioral Guidelines
 
