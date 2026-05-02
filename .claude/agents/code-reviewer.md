@@ -1,7 +1,7 @@
 ---
 name: code-reviewer
 description: Expert code review specialist. Use for quality and maintainability reviews after significant code changes.
-tools: [read, grep, glob]
+tools: read, grep, glob
 model: sonnet
 ---
 

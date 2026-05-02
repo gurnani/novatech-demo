@@ -8,21 +8,8 @@
         "@modelcontextprotocol/server-github"
       ],
       "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+        "GITHUB_ACCESS_TOKEN": "${MCP_TOKEN}"
       }
     }
-  },
-  "permissions": {
-    "allow": [
-      "mcp__github__list_pull_requests",
-      "Bash(gh pr *)",
-      "PowerShell($headers = @{ Authorization = \"token $env:GITHUB_TOKEN\" }; Invoke-RestMethod -Uri \"https://api.github.com/repos/gurnani/novatech-demo/pulls?state=open\" -Headers $headers | Select-Object number, title, @{n='created_at';e={$_.created_at}}, @{n='user';e={$_.user.login}})",
-      "PowerShell($headers = @{ Authorization = \"token $env:GITHUB_TOKEN\" }; $response = Invoke-RestMethod -Uri \"https://api.github.com/repos/gurnani/novatech-demo/pulls?state=open\" -Headers $headers; $response | ConvertTo-Json -Depth 2)",
-      "PowerShell(Write-Host \"Token set: $\\($env:GITHUB_TOKEN -ne $null -and $env:GITHUB_TOKEN -ne ''\\)\"; try { $headers = @{ Authorization = \"token $env:GITHUB_TOKEN\" }; $response = Invoke-RestMethod -Uri \"https://api.github.com/repos/gurnani/novatech-demo/pulls?state=open\" -Headers $headers; Write-Host \"PR count: $\\($response.Count\\)\"; $response | ForEach-Object { Write-Host \"#$\\($_.number\\) - $\\($_.title\\)\" } } catch { Write-Host \"Error: $_\" })",
-      "PowerShell($headers = @{ Authorization = \"token $env:GITHUB_TOKEN\" }; $response = Invoke-RestMethod -Uri \"https://api.github.com/repos/gurnani/novatech-demo/pulls?state=open\" -Headers $headers; Write-Host \"Open PRs: $\\($response.Count\\)\"; $response | ForEach-Object { Write-Host \"#$\\($_.number\\) | $\\($_.title\\) | by $\\($_.user.login\\) | $\\($_.created_at\\)\" })",
-      "Bash(npx figma-remote *)",
-      "Bash(npx @figma/mcp-server --version)",
-      "Bash(npx figma-developer-mcp *)"
-    ]
   }
 }

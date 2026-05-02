@@ -1,7 +1,7 @@
 ---
 name: content-reviewer
 description: Use PROACTIVELY to review website content after changes. Validates copy quality, consistency, and completeness.
-tools: [read, grep, glob]
+tools: read, grep, glob
 model: sonnet
 ---
 

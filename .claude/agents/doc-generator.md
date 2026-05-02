@@ -1,7 +1,7 @@
 ---
 name: doc-generator
 description: Creates and updates project documentation. Use when new features are added or site structure changes.
-tools: [read, grep, edit, write]
+tools: read, grep, edit, write
 model: sonnet
 ---
 
